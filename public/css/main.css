@@ -5,8 +5,51 @@
 
     font-size: 18px;
 }
-header, .navbar{
+body{
+    transition: ease 300ms;
+}
+.body-dark{
+    background-color: #282828;
+
+    transition: ease 300ms;
+}
+.header_footer-dark{
+    background-color: #79a1c1;
+
+    transition: ease 300ms;
+}
+.card-dark{
     background-color: #8ebbe0;
+    color: #fff;
+
+    transition: ease 300ms;
+}
+header{
+    background-color: #8ebbe0;
+
+    transition: ease 300ms;
+}
+header, .navbar{
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+header ul{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+header li{
+    list-style: none;
 }
 header #container-fluid{
     display: flex;
@@ -33,21 +76,33 @@ header .navbar-brand{
 .main .card{
     padding: 20px;
     border: 2px solid #8ebbe0;
+
+    transition: ease 300ms;
 }
 .main .card .titulo{
     align-self: center;
     font-size: 1.5rem;
+
+    padding: 3%;
 }
 .main .card .descricao{
     text-align: justify;
 }
 .main .card button{
+    width: 40%;
     padding: 5px;
-    border: 0;
+    border: 2px solid #8ebbe0;
+
     color: #fff;
     background-color: #8ebbe0;
     align-self: center;
-    width: 40%;
+
+    transition: ease 300ms;
+}
+.main .card button:hover{
+    color: #8ebbe0;;
+    border: 2px solid #8ebbe0;
+    background-color: #fff;
 }
 footer{
     padding: 10px;
@@ -55,6 +110,8 @@ footer{
     background-color: #8ebbe0;
 
     text-align: center;
+
+    transition: ease 300ms;
 }
 footer h4{
     margin: 0;
