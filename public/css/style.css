@@ -105,17 +105,17 @@ header .navbar-brand{
     background-color: #fff;
 }
 footer{
-    padding: 10px;
+
     color: #fff;
     background-color: #8ebbe0;
 
     text-align: center;
 
     transition: ease 300ms;
-}
-footer h4{
-    margin: 0;
     font-size: 1rem;
+}
+footer p{
+    margin: 0;
 }
 footer a{
     color: #fff;
