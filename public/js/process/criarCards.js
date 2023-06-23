@@ -1,7 +1,7 @@
-import {listaPosts} from "../utils/listaPosts.js";
+import {listaPosts} from "./listaPosts.js";
 
 
-export const criarPost = () => {
+export const criarCards = () => {
     let main = document.querySelector(".main")
     listaPosts.forEach((post) => {
 

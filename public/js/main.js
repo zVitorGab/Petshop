@@ -1,8 +1,8 @@
-import {criarPost} from "./process/criarCards.js"
+import { criarCards } from "./process/criarCards.js"
 
 window.onload = () => {
 
-    criarPost()
+    criarCards()
     let cards = document.querySelectorAll(".card")
 
     cards.forEach((card) => {

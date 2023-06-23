@@ -1,44 +1,29 @@
-let formulario = document.querySelector("form")
+import { checkInputs } from "./validation/checkInputs.js"
+import { gerarCardSelecionado } from "./process/gerarCardSelecionado.js"
+import * as elemento from "./process/selecionarElementos.js"
 
-const checkInputs = (nome, telefone, email) => {
-    let control = true
-    if(nome.value.trim() == ""){
-        nome.classList.add("erro")
-        control = false
-    }
-    if(telefone.value.trim() == ""){
-        telefone.classList.add("erro")
-        control = false
-    }
-    if(email.value.trim() == ""){
-        email.classList.add("erro")
-        control = false
-    }
-    return control
+window.onload = () => {
+    gerarCardSelecionado()
 }
+
+let formulario = document.querySelector("form")
 
 formulario.addEventListener("submit", (event) => {
 
-    let nome = document.querySelector("#nome")
-    let telefone = document.querySelector("#telefone")
-    let email = document.querySelector("#email")
-    let renda = document.querySelector("input[type='radio']:checked")
-    let residencia = document.querySelector("#residencia")
-    let opcaoResidencia = residencia.options[residencia.selectedIndex]
-    let intencao = document.querySelector("#intencao")
-
-    if(!checkInputs(nome, telefone, email)){
+    event.preventDefault()
+    
+    if(!checkInputs()){
         event.preventDefault()
     }else{
-
         const adotante = {
             id:1,
-            nome: nome.value,
-            telefone: telefone.value,
-            email: email.value,
-            renda: renda,
-            residencia: opcaoResidencia.value,
-            intencao: intencao.value
+            idAnimal: sessionStorage.getItem("idAnimal"),
+            nome: elemento.nome.value,
+            telefone: elemento.telefone.value,
+            email: elemento.email.value,
+            renda: elemento.renda,
+            residencia:elemento. opcaoResidencia.value,
+            intencao: elemento.intencao.value
         }    
         console.log(adotante)
     }
