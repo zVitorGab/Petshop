@@ -7,11 +7,11 @@ export const checkInputs = () => {
     let cont = 0
     if(elemento.nome.value.trim() == ""){
         elemento.nome.classList.add("erro")
-        control = false
+        control = false        
     }
     if(elemento.telefone.value.trim() == ""){
         elemento.telefone.classList.add("erro")
-        control = false
+        control = false        
     }
     if(elemento.email.value.trim() == ""){
         elemento.email.classList.add("erro")
@@ -26,11 +26,11 @@ export const checkInputs = () => {
     })
     
     if(elemento.residencia.value == "0"){
-        control = false
+        control = false   
     }
 
-    if(elemento.intencao.value = " "){
-        control = false
+    if(elemento.intencao.value == " "){
+        control = false   
     }
 
 
