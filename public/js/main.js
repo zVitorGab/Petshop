@@ -1,18 +1,13 @@
 import { criarCards } from "./process/criarCards.js"
+import { alterarTema } from "./utils/alterarTema.js"
+import { inserirIdSessionStorage } from "./process/inserirIdSessionStorage.js"
 
 window.onload = () => {
 
     criarCards()
-    let cards = document.querySelectorAll(".card")
+    alterarTema()
+    inserirIdSessionStorage()
 
-    cards.forEach((card) => {
-        card.lastElementChild.addEventListener("click", (event) => {
-            event.preventDefault()
-
-            sessionStorage.setItem("idAnimal", card.lastElementChild.getAttribute("idAnimal"))
-            window.location.href = "../public/adocao.html"
-        })
-    })
 }
 
 
