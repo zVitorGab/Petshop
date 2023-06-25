@@ -60,3 +60,15 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+.body-dark{
+    background-color: #282828;
+    transition: ease 300ms;
+}
+.header_footer-dark{
+    background-color: #79a1c1;
+}
+.card-dark{
+    color: #fff;
+    transition: ease 300ms;
+}

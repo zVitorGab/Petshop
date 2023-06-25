@@ -7,28 +7,13 @@
 }
 body{
     transition: ease 300ms;
-}
-.body-dark{
-    background-color: #282828;
-
-    transition: ease 300ms;
-}
-.header_footer-dark{
-    background-color: #79a1c1;
-
-    transition: ease 300ms;
-}
-.card-dark{
-    background-color: #8ebbe0;
-    color: #fff;
-
-    transition: ease 300ms;
+    scroll-behavior: smooth;
 }
 header{
     height: 100px;
     background-color: #8ebbe0;
 
-    transition: ease 300ms;
+    transition: ease;
     -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
     -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
     box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
@@ -79,8 +64,11 @@ header li a, header .links .configuracoes{
     text-decoration: none;
 }
 header li a:hover, header .links .configuracoes:hover{
-    transition: ease 200ms;
-    color: #79a1c1;
+    transition: ease 100ms;
+    font-weight: bold;
+}
+header .links .configuracoes:focus{
+    font-weight: bold;
 }
 header #container-fluid{
     display: flex;
@@ -103,7 +91,7 @@ header .navbar-brand{
     gap: 20px;
 }
 .main .card{
-    background-color: #8ebbe04a;
+    background-color: #8ebbe056;
     height: 580px;
     width: 400px;
     padding: 20px;
@@ -113,7 +101,7 @@ header .navbar-brand{
 }
 
 
-.card button {
+.card button, .card .buttons input{
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -125,7 +113,7 @@ header .navbar-brand{
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
   }
-  .card button:before {
+  .card button:before{
     content: "";
     position: absolute;
     z-index: -1;
@@ -188,15 +176,13 @@ footer{
     display: flex;
     flex-direction: row;
     position: relative;
-    height: 70px;
     color: #fff;
     background-color: #8ebbe0;
 
     text-align: center;
 
     transition: ease 300ms;
-    font-size: 1rem;
-    padding: 10px;
+    padding: 8px;
 }
 footer .informacoes{
     width: 100%;
@@ -207,7 +193,9 @@ footer .logo{
 }
 .logo img{
     width: 125px;
-
+}
+.logo .logoAutoral{
+    transition: ease 300ms;
 }
 footer p{
     margin: 0;

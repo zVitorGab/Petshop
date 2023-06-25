@@ -2,7 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: inherit;
+    align-items: end;
+
+    position: relative;
+
+    gap: 0px;
 }
 .main .card{
     padding: 10px;
@@ -35,9 +39,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
 .form-item input, .form-item select, .form-item textarea{
     padding: 1px;
     padding-left: 5px;
+    border-radius: 2px;
     border: 2px solid #8ebbe0;
 
-    appearance: textfield;
+    transition: ease 500ms;
 }
 .form-item input:focus, .form-item select:focus, .form-item textarea:focus{
     outline: 0;
@@ -93,5 +98,73 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
 }
 
 .erro{
-    background-color: rgb(223, 59, 59);
+    background-color: rgb(247, 113, 113);
+    color: #fff;
+
+    transition: ease 500ms;
+}
+.erro::placeholder{
+    color: #fff;
+}
+
+.divErro{
+    background-color: rgb(247, 113, 113);
+    border: 2px solid rgb(202, 74, 74);
+    border-top: 5px solid rgb(202, 74, 74);
+    border-radius: 0.375rem;
+    padding: 10px;
+    
+    color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    height: auto;
+    gap: 5px;
+
+    left: 5px;
+    bottom: 20px;
+
+    transition: ease 500ms;
+}
+#erroAdocao{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    max-height: 200px;
+}
+.divErro *{
+    margin: 0;
+}
+#fechaErro:hover{
+    opacity: 0.5;
+}
+.identificadorErro{
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#tituloErro{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+.itensErro{
+    width: 100%;
+}
+.itensErro p{
+    font-size: 0.9rem;
+}
+.itensErro hr{
+    border-top: 2px solid;
+    color: rgb(202, 74, 74);
+}
+.erroDisabled{
+    opacity: 0;
 }
