@@ -1,9 +1,8 @@
-import {listaPosts} from "./listaPosts.js";
-
-
-export const criarCards = () => {
+export const criarCardsStorage = () => {
     let main = document.querySelector(".main")
-    listaPosts.forEach((post) => {
+    let listaCards = JSON.parse(localStorage.getItem('animais'))
+
+    listaCards.forEach((post) => {
 
         let card =
         `

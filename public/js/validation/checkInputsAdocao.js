@@ -1,8 +1,8 @@
-import * as elemento from "../process/selecionarElementos.js"
+import * as elemento from "../utils/elementosAdocao.js"
 
 let radioBts = document.querySelectorAll(".radioBts")
 
-export const checkInputs = () => {
+export const checkInputsAdocao = () => {
     let control = true
     let cont = 0
     if(elemento.nome.value.trim() == ""){
@@ -29,7 +29,7 @@ export const checkInputs = () => {
         control = false   
     }
 
-    if(elemento.intencao.value == " "){
+    if(elemento.intencao.value.trim() == ""){
         control = false   
     }
 

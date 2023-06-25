@@ -1,10 +1,10 @@
-import { criarCards } from "./process/criarCards.js"
 import { alterarTema } from "./utils/alterarTema.js"
 import { inserirIdSessionStorage } from "./process/inserirIdSessionStorage.js"
+import { criarCardsStorage } from "./process/criarCardsStorage.js"
 
 window.onload = () => {
 
-    criarCards()
+    criarCardsStorage()
     alterarTema()
     inserirIdSessionStorage()
 
