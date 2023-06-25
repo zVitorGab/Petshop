@@ -6,7 +6,7 @@ export const criarCardsStorage = () => {
 
         let card =
         `
-            <div class="card col-12 col-md-6 col-lg-4">
+            <div class="card col-12 col-md-6 col-lg-4" data-aos="zoom-in">
                 <img src="${post.imgURL}">
                 <h3 class="titulo">${post.titulo}</h3>
                 <p class="descricao">${post.descricao}</p>

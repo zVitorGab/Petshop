@@ -6,8 +6,10 @@ export const alterarTema = () => {
         let header = document.querySelector("header")
         let footer = document.querySelector("footer")
         let cards = document.querySelectorAll(".card")
+        let logo = document.querySelector(".logoImg")
     
         if(button.checked){
+            logo.setAttribute('src', './img/logo/LogoMiadosELatidos-DARK.png')
             body.classList.add("body-dark")
             header.classList.add("header_footer-dark")
             footer.classList.add("header_footer-dark")
@@ -17,6 +19,7 @@ export const alterarTema = () => {
             })
         }
         else{
+            logo.setAttribute('src', './img/logo/LogoMiadosELatidos-LIGHT.png')
             body.classList.remove("body-dark")
             header.classList.remove("header_footer-dark")
             footer.classList.remove("header_footer-dark")
