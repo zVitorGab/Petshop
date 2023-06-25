@@ -25,15 +25,26 @@ body{
     transition: ease 300ms;
 }
 header{
+    height: 100px;
     background-color: #8ebbe0;
 
     transition: ease 300ms;
+    -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+}
+header .container{
+    display: flex;
+    align-items: center
+    
 }
 header, .navbar{
+    width: 100%;
     display: flex;
     justify-content: center;
 
     position: relative;
+    
 }
 header ul{
     width: 100%;
@@ -42,14 +53,34 @@ header ul{
 
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
     align-items: center;
 
     position: relative;
 }
+header ul .links{
+    display: flex;
+    flex-direction: row;
+}
+header .links .modoEscuro{
+    font-size: 0.9rem;
+}
+header .dropdown-menu li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 header li{
+    padding: 10px;
     list-style: none;
+}
+header li a, header .links .configuracoes{
+    color: #fff;
+    text-decoration: none;
+}
+header li a:hover, header .links .configuracoes:hover{
+    transition: ease 200ms;
+    color: #79a1c1;
 }
 header #container-fluid{
     display: flex;
@@ -62,20 +93,78 @@ header .navbar-brand{
     color: #fff;
 }
 .main{
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     align-items: center;
-    justify-content: center;
 
-    gap: 30px;
+    padding: 20px;
+    gap: 20px;
 }
 .main .card{
+    background-color: #8ebbe04a;
+    height: 580px;
+    width: 400px;
     padding: 20px;
     border: 2px solid #8ebbe0;
 
     transition: ease 300ms;
+}
+
+
+.card button {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
+  .card button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #79a1c1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .card button:hover, .card button:focus, .card button:active {
+    color: white;
+  }
+  .card button:hover:before, .card button:focus:before, .card button:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  }
+
+
+
+
+.main .card:hover{
+    background-color: #8ebbe06b;
+    border: 2px solid #8ebbe04a;
+    transition: ease 300ms;
+}
+.card img{
+    height: 300px;
 }
 .main .card .titulo{
     align-self: center;
@@ -87,23 +176,19 @@ header .navbar-brand{
     text-align: justify;
 }
 .main .card button{
-    width: 40%;
-    padding: 5px;
-    border: 2px solid #8ebbe0;
+    width: 50%;
+    padding: 10px;
+    border: none;
 
     color: #fff;
     background-color: #8ebbe0;
     align-self: center;
-
-    transition: ease 300ms;
-}
-.main .card button:hover{
-    color: #8ebbe0;;
-    border: 2px solid #8ebbe0;
-    background-color: #fff;
 }
 footer{
-    height: 69px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 70px;
     color: #fff;
     background-color: #8ebbe0;
 
@@ -112,6 +197,17 @@ footer{
     transition: ease 300ms;
     font-size: 1rem;
     padding: 10px;
+}
+footer .informacoes{
+    width: 100%;
+}
+footer .logo{
+    position: absolute;
+    right: 50px;
+}
+.logo img{
+    width: 125px;
+
 }
 footer p{
     margin: 0;
