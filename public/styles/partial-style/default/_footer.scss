@@ -1,0 +1,38 @@
+body{
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        color: #fff;
+        background-color: #8ebbe0;
+    
+        text-align: center;
+    
+        transition: ease 300ms;
+        padding: 8px;
+    
+        p{
+            margin: 0;
+        }
+        a{
+            color: #fff;
+        }
+    
+        .informacoes{
+            width: 100%;
+        }
+        .logo{
+            position: absolute;
+            right: 50px;
+    
+            img{
+                width: 125px;
+            }
+            .logoAutoral{
+                transition: ease 300ms;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,74 @@
+body{
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: end;
+    
+        position: relative;
+    
+        gap: 0px;
+
+        .card{
+            justify-content: center;
+            padding: 10px;
+            height: 536px;
+
+            hr{
+                margin: 3%;
+            }
+            .introducao{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    height: 110px;
+                }
+            }
+            .form-item{
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                textarea{
+                    width: 100%;
+                    height: 100px;
+                    resize: none;
+                }
+
+                input, textarea{
+                    padding: 1px;
+                    padding-left: 5px;
+                    border-radius: 2px;
+                    border: 2px solid #8ebbe0;
+                
+                    transition: ease 500ms;
+
+                    &:focus{
+                        outline: 0;
+                    }
+                }
+            }
+            .buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                input{
+                    width: 50%;
+                    padding: 5px;
+                    border: none;
+                
+                    color: #fff;
+                    background-color: #8ebbe0;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+body{
+
+    header{
+        height: 100px;
+        background-color: #8ebbe0;
+    
+        transition: ease;
+        -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.4);
+
+        .container{
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            position: relative;
+        }
+        ul{
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            position: relative;
+
+            .links{
+                display: flex;
+                flex-direction: row;
+
+                .modoEscuro{
+                    font-size: 0.9rem;
+                }
+
+                .configuracoes{
+                    color: #fff;
+                    text-decoration: none;
+
+                    &:hover{
+                        transition: ease 100ms;
+                        font-weight: bold;
+                    }
+                    &:focus{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        li{
+            padding: 10px;
+            list-style: none;
+
+            a{
+                color: #fff;
+                text-decoration: none;
+
+                &:hover{
+                    transition: ease 100ms;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        #container-fluid{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
